@@ -1,0 +1,14 @@
+dataset 1 :
+"C:\Users\twish\Downloads\Aquarium Dataset.v10i.yolov5pytorch.zip"
+
+dataset 2 :
+"C:\Users\twish\Downloads\last.v1i.yolov8.zip"
+
+dataset 3 :
+video :
+"C:\Users\twish\Videos\4K Video Downloader+\Relaxing 2 minutes colourful fish aquarium video.mp4"
+frames extracted :"C:\Users\twish\output_frames"
+
+dataset 4:
+roboflow :
+aquarium-dataset-78xdt-2dqkr/2
