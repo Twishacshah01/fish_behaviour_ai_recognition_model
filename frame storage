@@ -1,0 +1,39 @@
+import cv2
+import os
+
+# Define the video file and output directory
+video_file = r'C:\Users\twish\Videos\4K Video Downloader+\Relaxing 2 minutes colourful fish aquarium video.mp4'
+output_dir = r'C:\Users\twish\output_frames'
+
+# Create the output directory if it doesn't exist
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+# Open the video file
+cap = cv2.VideoCapture(video_file)
+
+# Check if the video file was opened successfully
+if not cap.isOpened():
+    print("Error opening video file")
+
+# Set the frame counter
+frame_counter = 0
+
+# Extract frames from the video
+while cap.isOpened():
+    ret, frame = cap.read()
+    
+    if not ret:
+        break
+    
+    # Save the frame to the output directory
+    cv2.imwrite(os.path.join(output_dir, f'frame_{frame_counter}.jpg'), frame)
+    
+    # Increment the frame counter
+    frame_counter += 1
+
+# Release the video capture object
+cap.release()
+
+print(f"Extracted {frame_counter} frames from the video")
+
